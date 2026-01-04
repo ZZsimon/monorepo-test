@@ -23,7 +23,7 @@
     "noFallthroughCasesInSwitch": false,
     "paths": {
       "@app/mylib": [
-        "libs/mylib/src"
+        "libs/mylib/src/index.ts"
       ],
       "@app/mylib/*": [
         "libs/mylib/src/*"

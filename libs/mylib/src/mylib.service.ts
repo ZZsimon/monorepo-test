@@ -1,4 +1,8 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class MylibService {}
+export class MylibService {
+  libService() {
+    return 'libService';
+  }
+}

@@ -1,9 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { MylibService } from '@app/mylib';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(
+    private readonly appService: AppService,
+    private readonly mylibService: MylibService,
+  ) {}
 
   @Get()
   getHello(): string {
@@ -12,6 +16,6 @@ export class AppController {
 
   @Get('app1')
   app1() {
-    return 'app1';
+    return this.mylibService.libService() + ' app1';
   }
 }
