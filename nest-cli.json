@@ -27,6 +27,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/monorepo-test/tsconfig.app.json"
       }
+    },
+    "mylib": {
+      "type": "library",
+      "root": "libs/mylib",
+      "entryFile": "index",
+      "sourceRoot": "libs/mylib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/mylib/tsconfig.lib.json"
+      }
     }
   }
 }

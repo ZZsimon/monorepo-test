@@ -1,23 +1,39 @@
 {
-    // 使用 IntelliSense 了解相关属性。 
-    // 悬停以查看现有属性的描述。
-    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "debug test",
+            "name": "debug monorepo-test",
             "request": "launch",
+            "type": "node",
+            "runtimeExecutable": "npm",
             "runtimeArgs": [
                 "run",
                 "start:dev"
             ],
-            "runtimeExecutable": "npm",
+            "args": [
+                "monorepo-test"
+            ], // ⭐ 这里写传入参数
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "type": "node",
             "console": "integratedTerminal",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "debug app2",
+            "request": "launch",
+            "type": "node",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "start:dev",
+                "app2"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
